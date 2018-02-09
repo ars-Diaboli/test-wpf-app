@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="360" MinWidth="600" Style="{DynamicResource WindowStyle}">
+	<Window.Resources>
+		<local:SelectedDirectory x:Key="SelectedDirectory" />
+	</Window.Resources>
+	<DockPanel>
+		<Menu DockPanel.Dock="Top" HorizontalAlignment="Stretch" Style="{DynamicResource MenuStyle}">
+			<MenuItem Header="File"></MenuItem>
+			<MenuItem Header="Edit"></MenuItem>
+			<MenuItem Header="View">
+				<MenuItem Header="Theme" x:Name="ThemeSelector">
+				</MenuItem>
+			</MenuItem>
+			<MenuItem Header="Tools"></MenuItem>
+			<MenuItem Header="Help"></MenuItem>
+		</Menu>
+		<DockPanel DockPanel.Dock="Top" Style="{DynamicResource ControlDockStyle}" >
+			<Button DockPanel.Dock="Left" Content="Back" Style="{DynamicResource PanelButtonStyle}" />
+			<Button DockPanel.Dock="Left" Content="Up" Style="{DynamicResource PanelButtonStyle}" />
+			<TextBox x:Name="DirectoryPath" Text="{Binding Source={StaticResource SelectedDirectory}, Path=DirectoryPath}" DockPanel.Dock="Left" Style="{DynamicResource DirectoryPathStyle}" TextWrapping="Wrap" />
+		</DockPanel>
+
+		<StatusBar DockPanel.Dock="Bottom" Style="{DynamicResource StatusBarStyle}">
+			<TextBlock>12345678</TextBlock>
+		</StatusBar>
+
+		<StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="0,0,0,10">
+			<Button Content="Button" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="75"/>
+			<Button Content="Button" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="75"/>
+		</StackPanel>
+
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="1*" MinWidth="80" />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="3*" MinWidth="80" />
+			</Grid.ColumnDefinitions>
+			<TreeView Grid.Column="0" Style="{DynamicResource TreeViewStyle}" />
+			<GridSplitter Grid.Column="1" Margin="5,8,5,8" ResizeBehavior="PreviousAndNext" Width="5" ShowsPreview="False" VerticalAlignment="Stretch" />
+			<DataGrid Grid.Column="2" Style="{DynamicResource DataGridStyle}" ></DataGrid>
+		</Grid>
+
+	</DockPanel>
+</Window>
