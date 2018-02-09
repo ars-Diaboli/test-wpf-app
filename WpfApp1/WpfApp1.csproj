@@ -60,71 +60,8 @@
     <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.2.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
       <HintPath>..\packages\Extended.Wpf.Toolkit.3.2.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
     </Reference>
-    <Reference Include="Xceed.Wpf.Controls.v6.5, Version=6.5.18059.19030, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.Controls.6.5.18059.19030\lib\net40\Xceed.Wpf.Controls.v6.5.dll</HintPath>
-    </Reference>
     <Reference Include="Xceed.Wpf.DataGrid, Version=3.2.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
       <HintPath>..\packages\Extended.Wpf.Toolkit.3.2.0\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.DataGrid.ThemePack.1.v6.5, Version=6.5.18059.19030, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.DataGrid.ThemePack.1.6.5.18059.19030\lib\net40\Xceed.Wpf.DataGrid.ThemePack.1.v6.5.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.DataGrid.ThemePack.2.v6.5, Version=6.5.18059.19030, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.DataGrid.ThemePack.2.6.5.18059.19030\lib\net40\Xceed.Wpf.DataGrid.ThemePack.2.v6.5.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.DataGrid.ThemePack.3.v6.5, Version=6.5.18059.19030, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.DataGrid.ThemePack.3.6.5.18059.19030\lib\net40\Xceed.Wpf.DataGrid.ThemePack.3.v6.5.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.DataGrid.ThemePack.4.v6.5, Version=6.5.18059.19030, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.DataGrid.ThemePack.4.6.5.18059.19030\lib\net40\Xceed.Wpf.DataGrid.ThemePack.4.v6.5.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.DataGrid.ThemePack.5.v6.5, Version=6.5.18059.19030, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.DataGrid.ThemePack.5.6.5.18059.19030\lib\net40\Xceed.Wpf.DataGrid.ThemePack.5.v6.5.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.DataGrid.v6.5, Version=6.5.18059.19030, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.DataGrid.6.5.18059.19030\lib\net40\Xceed.Wpf.DataGrid.v6.5.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.ListBox, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.ListBox.3.6.17613.09190\lib\net40\Xceed.Wpf.ListBox.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.ListBox.Themes.LiveExplorer, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.ListBox.Themes.LiveExplorer.3.6.17613.09190\lib\net40\Xceed.Wpf.ListBox.Themes.LiveExplorer.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.ListBox.Themes.Metro, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.ListBox.Themes.Metro.3.6.17613.09190\lib\net40\Xceed.Wpf.ListBox.Themes.Metro.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.ListBox.Themes.Office2007, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.ListBox.Themes.Office2007.3.6.17613.09190\lib\net40\Xceed.Wpf.ListBox.Themes.Office2007.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.ListBox.Themes.Windows10, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.ListBox.Themes.Windows10.3.6.17613.09190\lib\net40\Xceed.Wpf.ListBox.Themes.Windows10.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.ListBox.Themes.WMP11, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.ListBox.Themes.WMP11.3.6.17613.09190\lib\net40\Xceed.Wpf.ListBox.Themes.WMP11.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.Themes, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.Themes.3.6.17613.09190\lib\net40\Xceed.Wpf.Themes.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.Themes.Metro, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.Themes.Metro.3.6.17613.09190\lib\net40\Xceed.Wpf.Themes.Metro.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.Themes.Office2007, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.Themes.Office2007.3.6.17613.09190\lib\net40\Xceed.Wpf.Themes.Office2007.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.Themes.Windows10, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.Themes.Windows10.3.6.17613.09190\lib\net40\Xceed.Wpf.Themes.Windows10.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.Toolkit, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.Toolkit.3.6.17613.09190\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.Toolkit.Themes.Metro, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.Toolkit.Themes.Metro.3.6.17613.09190\lib\net40\Xceed.Wpf.Toolkit.Themes.Metro.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.Toolkit.Themes.Office2007, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.Toolkit.Themes.Office2007.3.6.17613.09190\lib\net40\Xceed.Wpf.Toolkit.Themes.Office2007.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.Toolkit.Themes.Windows10, Version=3.6.17613.9190, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xceed.Wpf.Toolkit.Themes.Windows10.3.6.17613.09190\lib\net40\Xceed.Wpf.Toolkit.Themes.Windows10.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
