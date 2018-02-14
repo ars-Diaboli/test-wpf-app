@@ -7,30 +7,6 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="360" MinWidth="600" Style="{DynamicResource WindowStyle}">
-	<!--<Window.Template>
-		<ControlTemplate TargetType="Window">
-			<Border Name="newBorder" CornerRadius="150" Opacity="0.7" Background="LightBlue">
-				<Grid>
-					<Grid.RowDefinitions>
-						<RowDefinition Height="Auto" />
-						<RowDefinition />
-						<RowDefinition Height="Auto" />
-					</Grid.RowDefinitions>
-					--><!--Заголовок--><!--
-					<TextBlock Text="{TemplateBinding Title}" FontWeight="Bold" HorizontalAlignment="Center"/>
-					--><!--Основное содержание--><!--
-					<Border Grid.Row="1">
-						<AdornerDecorator>
-							<ContentPresenter />
-						</AdornerDecorator>
-					</Border>
-					--><!--Элемент захвата и изменения размера - работает только для прямоугольных окон--><!--
-					<ResizeGrip Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-					            Visibility="Collapsed" IsTabStop="False" />
-				</Grid>
-			</Border>
-		</ControlTemplate>
-	</Window.Template>-->
 	<Window.Resources>
 		<local:SelectedDirectory x:Key="SelectedDirectory" />
 		<ControlTemplate TargetType="Button" x:Key="navBtnTemplate">

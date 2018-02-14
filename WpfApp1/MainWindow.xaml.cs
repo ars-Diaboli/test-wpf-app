@@ -30,6 +30,8 @@ namespace WpfApp1
 		{
 			InitializeComponent();
 			LoadThemes();
+
+			DataContext = new FileExplorerViewModel();
 		}
 
 		private void LoadThemes()
