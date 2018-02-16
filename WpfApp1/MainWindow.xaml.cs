@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.Model;
 
 namespace WpfApp1
 {
@@ -26,12 +27,14 @@ namespace WpfApp1
 	{
 		private const string ThemeExt = ".baml";
 
+		private FileExplorerViewModel VM { get; }
+
 		public MainWindow()
 		{
 			InitializeComponent();
-			LoadThemes();
+			//LoadThemes();
 
-			DataContext = new FileExplorerViewModel();
+			DataContext = VM = new FileExplorerViewModel();
 		}
 
 		private void LoadThemes()
@@ -78,6 +81,14 @@ namespace WpfApp1
 			ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
 			Application.Current.Resources.Clear();
 			Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+		}
+
+		private void FoldersTree_OnExpanded(object sender, RoutedEventArgs e)
+		{
+			if (e.OriginalSource is TreeViewItem tvi)
+			{
+				VM.ExpandingCommand.Execute(tvi.DataContext);
+			}
 		}
 	}
 }

@@ -5,14 +5,21 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfApp1.Toolkit;
 
 namespace WpfApp1.Model
 {
 	public class ExplorerNode
 	{
-		public ObservableCollection<ExplorerNode> Items { get; set; }
+		public ObservableCollection<ExplorerNode> Items { get; } = new ObservableCollection<ExplorerNode>();
 
-		public IEnumerable<ExplorerNode> SubFolders => Items?.Where(i => i.IsFolder || i.IsDevice);
+		public ObservableCollection<ExplorerNode> SubFolders
+		{
+			get
+			{
+				return new ObservableCollection<ExplorerNode>(Items.Where(i => i.IsFolder));
+			}
+		}
 
 		public bool IsLoaded { get; set; }
 
@@ -26,13 +33,25 @@ namespace WpfApp1.Model
 
 		public DateTime DateModified { get; set; }
 
+		public bool IsLogicalDrive { get; set; }
+
 		public bool IsFolder => Attributes.HasFlag(FileAttributes.Directory);
 
-		public bool IsDevice => Attributes.HasFlag(FileAttributes.Device);
+		public string Icon => IconHelper.GetIconPath(this);
 
-		public string Name => !IsDevice
-			? System.IO.Path.GetFileName(Path) 
-			: Path.Split(System.IO.Path.VolumeSeparatorChar).First();
+		public string Name
+		{
+			get
+			{
+				if (IsLogicalDrive)
+					return Path;
+
+				//if (IsFolder)
+				//	return Directory;
+
+				return System.IO.Path.GetFileName(Path);
+			}
+		}
 
 		public string Extension => System.IO.Path.GetExtension(Path);
 

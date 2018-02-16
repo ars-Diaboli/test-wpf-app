@@ -109,3 +109,4 @@ C:\Users\Yauheni_Unger\Source\Repos\test-wpf-app\WpfApp1\obj\Debug\WpfApp1.cspro
 C:\Users\Yauheni_Unger\Source\Repos\test-wpf-app\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Users\Yauheni_Unger\Source\Repos\test-wpf-app\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\Yauheni_Unger\Source\Repos\test-wpf-app\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\Yauheni_Unger\Source\Repos\test-wpf-app\WpfApp1\bin\Debug\System.Windows.Interactivity.dll

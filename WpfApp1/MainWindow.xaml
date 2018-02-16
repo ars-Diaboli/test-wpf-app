@@ -3,8 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:localToolkit="clr-namespace:WpfApp1.Toolkit"
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="360" MinWidth="600" Style="{DynamicResource WindowStyle}">
 	<Window.Resources>
@@ -60,9 +61,20 @@
 				<ColumnDefinition Width="Auto" />
 				<ColumnDefinition Width="3*" MinWidth="80" />
 			</Grid.ColumnDefinitions>
-			<TreeView Grid.Column="0" Style="{DynamicResource TreeViewStyle}" />
+			<TreeView Grid.Column="0" x:Name="foldersTree" 
+			          TreeViewItem.Expanded="FoldersTree_OnExpanded"  
+			          ItemsSource="{Binding Path=Root}">
+				<TreeView.ItemTemplate>
+					<HierarchicalDataTemplate ItemsSource="{Binding Path=Items}">
+						<StackPanel Orientation="Horizontal">
+							<Image Width="16" Height="16" Margin="3,0" Source="{Binding Path=Icon}" />
+							<TextBlock Text="{Binding Name}" />
+						</StackPanel>
+					</HierarchicalDataTemplate>
+				</TreeView.ItemTemplate>
+			</TreeView>
 			<GridSplitter Grid.Column="1" Margin="5,8,5,8" ResizeBehavior="PreviousAndNext" Width="5" ShowsPreview="False" VerticalAlignment="Stretch" />
-			<DataGrid Grid.Column="2" Style="{DynamicResource DataGridStyle}" ></DataGrid>
+			<DataGrid Grid.Column="2" ></DataGrid>
 		</Grid>
 
 	</DockPanel>

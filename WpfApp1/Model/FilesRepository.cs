@@ -13,14 +13,10 @@ namespace WpfApp1.Model
 		public ObservableCollection<ExplorerNode> GetRootItems()
 		{
 			var drives = Directory.GetLogicalDrives();
-
 			var entries = new ObservableCollection<ExplorerNode>();
 			foreach (var drive in drives)
 			{
-				var entry = new ExplorerNode();
-				entry.Path = drive;
-
-				entries.Add(entry);
+				entries.Add(Map(drive, true));
 			}
 
 			return entries;
@@ -28,20 +24,35 @@ namespace WpfApp1.Model
 
 		public ObservableCollection<ExplorerNode> GetFolderItems(string path)
 		{
-			var items = Directory.GetFileSystemEntries(path);
 			var entries = new ObservableCollection<ExplorerNode>();
 
-			foreach (var item in items)
-			{
-				var entry = new ExplorerNode();
-				entry.Path = item;
-				entry.IsLoaded = false;
-				entry.Attributes = File.GetAttributes(path);
+			if (!Directory.Exists(path))
+				return entries;
 
-				entries.Add(entry);
+			try
+			{
+				var items = Directory.GetFileSystemEntries(path);
+				foreach (var item in items)
+				{
+					entries.Add(Map(item));
+				}
+			}
+			catch (UnauthorizedAccessException e)
+			{
+				return entries;
 			}
 
 			return entries;
+		}
+
+		private static ExplorerNode Map(string path, bool isLogicalDrive = false)
+		{
+			var entry = new ExplorerNode();
+			entry.Path = path;
+			entry.IsLoaded = false;
+			entry.Attributes = File.GetAttributes(path);
+			entry.IsLogicalDrive = isLogicalDrive;
+			return entry;
 		}
 	}
 }
